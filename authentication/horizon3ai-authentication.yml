@@ -1,0 +1,45 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.horizon3.ai/api/getting_started/authenticate/
+docs: https://docs.horizon3.ai/api/getting_started/authenticate/
+summary:
+  types: [apiKey, http-bearer, oauth2]
+  api_key_exchange: true
+  bearer_format: JWT
+  token_ttl_seconds: 3600
+schemes:
+- name: apiKeyAuth
+  type: apiKey
+  description: >-
+    An API key generated in the Portal (User -> Account Settings). It is POSTed as
+    JSON {"key": "<H3_API_KEY>"} to the regional /v1/auth endpoint and exchanged for
+    a short-lived JWT. The key itself is not sent on GraphQL requests.
+  auth_endpoints:
+  - region: US
+    url: https://api.gateway.horizon3ai.com/v1/auth
+  - region: EU
+    url: https://api.gateway.horizon3ai.eu/v1/auth
+  roles:
+  - name: User
+    description: Basic read/write; can run pentests and read results.
+  - name: Read-only
+    description: Can read pentest results but cannot run pentests.
+  - name: NodeZero Runner
+    description: Specialized, heavily restricted role for NodeZero Runners.
+- name: bearerAuth
+  type: http
+  scheme: bearer
+  bearerFormat: JWT
+  description: >-
+    The JWT returned by /v1/auth is sent as an Authorization: Bearer header on every
+    GraphQL request to /v1/graphql. Expires after 1 hour; re-authenticate to renew.
+  applied_to: https://api.gateway.horizon3ai.com/v1/graphql
+- name: oauth2Mcp
+  type: oauth2
+  description: >-
+    The Horizon3.ai-hosted MCP server authenticates with OAuth 2.1 + PKCE via
+    oauth-proxy.horizon3ai.com (scopes read, write). See mcp/horizon3ai-mcp.yml.
+  flow: authorizationCode
+  authorizationUrl: https://oauth-proxy.horizon3ai.com/authorize
+  tokenUrl: https://oauth-proxy.horizon3ai.com/token
+  scopes: [read, write]
