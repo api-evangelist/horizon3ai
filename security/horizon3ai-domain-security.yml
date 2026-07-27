@@ -1,0 +1,33 @@
+generated: '2026-07-19'
+method: probed
+source: live DNS/TLS/HTTP probes of apis.yml + OpenAPI hosts
+hosts:
+- host: horizon3.ai
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep  5 05:04:21 2026 GMT
+  hsts: true
+  hsts_max_age: 31536000
+- host: docs.horizon3.ai
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Sep  8 22:02:38 2026 GMT
+  hsts: false
+- host: api.gateway.horizon3ai.com
+  https: true
+  tls_version: TLSv1.3
+  cert_expires: Jan  8 23:59:59 2027 GMT
+  hsts: null
+domains:
+- domain: horizon3.ai
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: reject
+- domain: horizon3ai.com
+  dnssec: false
+  caa: []
+  spf: true
+  dmarc: true
+  dmarc_policy: none

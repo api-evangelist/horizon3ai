@@ -1,0 +1,83 @@
+generated: '2026-07-19'
+method: derived
+source: https://docs.horizon3.ai/api/graphql/
+notes: >-
+  Derived from the documented NodeZero GraphQL object types and their query/mutation
+  surface. GraphQL (no OpenAPI $ref graph); relationships inferred from the domain
+  model and the *_page list queries.
+entities:
+- name: Pentest
+  description: Aggregated results of a pentest across one or more ops.
+- name: Op
+  description: An individual pentest operation (execution) of NodeZero.
+- name: Weakness
+  description: A discovered, often proven-exploitable vulnerability.
+- name: WeaknessSeries
+  description: Unified tracking of a weakness across ops over time.
+- name: AttackPath
+  description: A chain of compromises linking weaknesses, hosts, and credentials.
+- name: Host
+  description: A scanned network device / asset discovered during an op.
+- name: Credential
+  description: Exposed / captured authentication material.
+- name: AssetGroup
+  description: A group of authorized external assets (IPs/domains) in scope.
+- name: OpTemplate
+  description: A reusable pentest configuration.
+- name: Schedule
+  description: A recurring pentest trigger (scheduled action).
+- name: Agent
+  description: A NodeZero Runner deployment.
+- name: Perspective
+  description: An asset-focused vulnerability view.
+- name: Tripwire
+  description: A deployed security monitoring / detection alert.
+relationships:
+- from: Pentest
+  to: Op
+  type: has_many
+  via: ops
+- from: Op
+  to: Weakness
+  type: has_many
+  via: weaknesses
+- from: Op
+  to: Host
+  type: has_many
+  via: hosts
+- from: Op
+  to: Credential
+  type: has_many
+  via: credentials
+- from: Op
+  to: AttackPath
+  type: has_many
+  via: attack_paths
+- from: Op
+  to: OpTemplate
+  type: belongs_to
+  via: op_template
+- from: AttackPath
+  to: Weakness
+  type: has_many
+  via: weaknesses
+- from: AttackPath
+  to: Host
+  type: has_many
+  via: hosts
+- from: Weakness
+  to: WeaknessSeries
+  type: belongs_to
+  via: weakness_series
+- from: Schedule
+  to: OpTemplate
+  type: references
+  via: op_template
+- from: Op
+  to: AssetGroup
+  type: references
+  via: asset_group
+- from: Agent
+  to: Op
+  type: has_many
+  via: ops

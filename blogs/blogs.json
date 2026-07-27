@@ -1,0 +1,11 @@
+{
+  "repo": "horizon3ai",
+  "feeds": [
+    {
+      "source": "https://api.gateway.horizon3ai.com/v1/graphql",
+      "error": "HTTPError"
+    }
+  ],
+  "post_count": 0,
+  "fetched": "2026-07-25T15:00:33Z"
+}

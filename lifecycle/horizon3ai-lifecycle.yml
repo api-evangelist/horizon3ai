@@ -1,0 +1,26 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.horizon3.ai/
+versioning:
+  scheme: uri-path
+  current: v1
+  api_base: https://api.gateway.horizon3ai.com/v1/graphql
+  platform_release_scheme: calendar (YYYY.MM, monthly)
+  notes: >-
+    The GraphQL API is served under a /v1 path. As a GraphQL API, fields evolve
+    additively; platform capability changes ship in monthly YYYY.MM releases.
+release_notes: https://docs.horizon3.ai/release_notes/
+status_page: https://status.horizon3.ai
+regions:
+- US (api.gateway.horizon3ai.com)
+- EU (api.gateway.horizon3ai.eu)
+- FedRAMP High / Gov (gov-horizon3ai.com)
+tokens:
+  jwt_ttl_seconds: 3600
+deprecation:
+  policy_url: null
+  sunset_header: false
+  notes: >-
+    No formal RFC 8594 Sunset/Deprecation header policy is documented. The Portal
+    ServiceNow "Ticketing" integration is marked deprecated in favor of ServiceNow
+    Vulnerability Response, but there is no published API deprecation-policy page.

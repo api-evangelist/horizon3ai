@@ -1,0 +1,34 @@
+generated: '2026-07-19'
+method: searched
+source: https://horizon3.ai/compliance/
+standards:
+- id: fedramp-high
+  conforms: true
+  evidence: NodeZero Federal achieved FedRAMP High authorization (2025), 421 NIST SP 800-53 Rev.5 controls.
+  source: https://horizon3.ai/vertical/federal/
+- id: soc2
+  conforms: true
+  evidence: Platform produces audit-ready artifacts aligned to SOC 2; listed on trust center.
+  source: https://trust.horizon3.ai/
+- id: nist-800-53
+  conforms: true
+  evidence: Foundational control framework behind FedRAMP High authorization.
+- id: cmmc
+  conforms: true
+  evidence: Supports CMMC 2.0 compliance workflows for supply-chain assurance.
+  source: https://horizon3.ai/compliance/
+- id: oauth2
+  conforms: true
+  evidence: Hosted MCP server uses OAuth 2.1 authorization server (RFC 8414 metadata).
+- id: oidc
+  conforms: true
+  evidence: MCP host publishes /.well-known/openid-configuration.
+- id: rfc8414-oauth-metadata
+  conforms: true
+  evidence: /.well-known/oauth-authorization-server served by oauth-proxy.horizon3ai.com.
+- id: rfc9728-protected-resource-metadata
+  conforms: true
+  evidence: /.well-known/oauth-protected-resource served by mcp.horizon3ai.com.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: GraphQL errors[] envelope, not application/problem+json.

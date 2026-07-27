@@ -1,8 +1,29 @@
 aid: horizon3ai
 name: Horizon3.ai
-description: 'Horizon3.ai is a company surfaced as a portfolio company of craft-ventures and added to
-  the API Evangelist network as a stub for enrichment. Sector: security. This profile is a lead awaiting
-  the enrichment pipeline.'
+description: >-
+  Horizon3.ai is a cybersecurity company whose NodeZero platform delivers autonomous
+  penetration testing and continuous security posture management. NodeZero safely
+  attacks your internal, external, cloud, and hybrid environments the way a real
+  adversary would, proving exploitable attack paths, prioritizing the fixes that
+  matter, and verifying that remediations actually work. Horizon3.ai exposes a
+  publicly documented GraphQL API (the NodeZero API) plus an h3-cli command-line
+  tool and a hosted Model Context Protocol (MCP) server, letting teams schedule
+  pentests, retrieve findings, weaknesses, attack paths, credentials, and host
+  inventory, and wire results into CI/CD, ticketing (Jira, ServiceNow), and agentic
+  workflows. NodeZero Federal is FedRAMP High authorized for public-sector use.
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
+image: https://www.horizon3.ai/wp-content/uploads/2023/08/1200x627-NodeZero-UI_Sankey.jpg
 url: https://raw.githubusercontent.com/api-evangelist/horizon3ai/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -12,11 +33,41 @@ x-tier: stub
 x-tier-reason: portfolio-lead
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-19'
 tags:
 - Company
 - Security
-apis: []
+- Cybersecurity
+- Penetration Testing
+- Autonomous Pentesting
+- Attack Surface Management
+- Exposure Management
+- Vulnerability Management
+- GraphQL
+- Offensive Security
+apis:
+- name: NodeZero GraphQL API
+  description: >-
+    The NodeZero API is a publicly accessible GraphQL API that exposes a subset of
+    the Horizon3.ai Portal: schedule and control autonomous pentest operations, and
+    read pentests, ops, weaknesses, attack paths, credentials, hosts, asset groups,
+    schedules, and downloadable reports. Authentication is via an API key exchanged
+    for a short-lived JWT bearer token.
+  humanURL: https://docs.horizon3.ai/api/
+  baseURL: https://api.gateway.horizon3ai.com/v1/graphql
+  tags:
+  - GraphQL
+  - Penetration Testing
+  - Security
+  properties:
+  - type: GraphQL
+    url: https://api.gateway.horizon3ai.com/v1/graphql
+  - type: APIReference
+    url: https://docs.horizon3.ai/api/graphql/
+  - type: GettingStarted
+    url: https://docs.horizon3.ai/api/getting_started/
+  - type: Authentication
+    url: https://docs.horizon3.ai/api/getting_started/authenticate/
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
@@ -25,3 +76,76 @@ maintainers:
 common:
 - type: Website
   url: https://horizon3.ai
+- type: DeveloperPortal
+  url: https://portal.horizon3ai.com
+- type: Documentation
+  url: https://docs.horizon3.ai/
+- type: APIReference
+  url: https://docs.horizon3.ai/api/graphql/
+- type: GettingStarted
+  url: https://docs.horizon3.ai/api/getting_started/
+- type: GraphQL
+  url: https://api.gateway.horizon3ai.com/v1/graphql
+- type: Blog
+  url: https://horizon3.ai/intelligence/blogs/
+- type: GitHubOrganization
+  url: https://github.com/horizon3ai
+- type: Roadmap
+  url: https://horizon3.ai/roadmap/
+- type: StatusPage
+  url: https://status.horizon3.ai
+- type: Pricing
+  url: https://horizon3.ai/use-case/packaging/
+- type: SignUp
+  url: https://portal.horizon3ai.com
+- type: Login
+  url: https://portal.horizon3ai.com
+- type: TermsOfService
+  url: https://horizon3.ai/terms-of-service/
+- type: PrivacyPolicy
+  url: https://horizon3.ai/privacy-policy/
+- type: TrustCenter
+  url: https://trust.horizon3.ai/
+- type: Compliance
+  url: https://horizon3.ai/compliance/
+- type: Security
+  url: https://horizon3.ai/vulnerability-disclosure-policy/
+- type: MCPServer
+  url: mcp/horizon3ai-mcp.yml
+- type: CLI
+  url: cli/horizon3ai-cli.yml
+- type: Packages
+  url: packages/horizon3ai-packages.yml
+- type: Authentication
+  url: authentication/horizon3ai-authentication.yml
+- type: OAuthScopes
+  url: scopes/horizon3ai-scopes.yml
+- type: WellKnown
+  url: well-known/horizon3ai-well-known.yml
+- type: ChangeLog
+  url: changelog/horizon3ai-changelog.yml
+- type: Lifecycle
+  url: lifecycle/horizon3ai-lifecycle.yml
+- type: Conventions
+  url: conventions/horizon3ai-conventions.yml
+- type: ErrorCatalog
+  url: errors/horizon3ai-problem-types.yml
+- type: Conformance
+  url: conformance/horizon3ai-conformance.yml
+- type: DataModel
+  url: data-model/horizon3ai-data-model.yml
+- type: Webhooks
+  url: asyncapi/horizon3ai-webhooks.yml
+- type: VulnerabilityDisclosure
+  url: security/horizon3ai-vulnerability-disclosure.yml
+- type: DomainSecurity
+  url: security/horizon3ai-domain-security.yml
+- type: LLMsTxt
+  url: llms/horizon3ai-llms.txt
+- type: AgentSkill
+  url: skills/_index.yml
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence

@@ -1,0 +1,39 @@
+# Horizon3.ai
+
+> Horizon3.ai's NodeZero platform delivers autonomous penetration testing and continuous security posture management. NodeZero safely attacks internal, external, cloud, and hybrid environments to prove exploitable attack paths, prioritize fixes, and verify remediations. It exposes a public GraphQL API, an h3-cli, and a hosted OAuth 2.1 MCP server. NodeZero Federal is FedRAMP High authorized.
+
+## APIs
+
+- [NodeZero GraphQL API](https://docs.horizon3.ai/api/): GraphQL API to schedule/control pentest ops and read weaknesses, attack paths, credentials, hosts, and reports. Endpoint https://api.gateway.horizon3ai.com/v1/graphql (US) / https://api.gateway.horizon3ai.eu/v1/graphql (EU).
+- [API Reference](https://docs.horizon3.ai/api/graphql/): Queries and mutations.
+- [Getting Started](https://docs.horizon3.ai/api/getting_started/): GraphQL basics.
+- [Authentication](https://docs.horizon3.ai/api/getting_started/authenticate/): API key -> 1-hour JWT bearer at /v1/auth.
+
+## Agent access
+
+- [Hosted MCP Server](https://docs.horizon3.ai/portal/features/mcp/h3_hosted/): Streamable-HTTP MCP at https://mcp.horizon3ai.com/mcp (US), https://mcp.horizon3ai.eu/mcp (EU), https://mcp.gov-horizon3ai.com/mcp (FedRAMP). OAuth 2.1 + PKCE via oauth-proxy.horizon3ai.com, scopes read/write.
+
+## Tools
+
+- [h3-cli](https://github.com/horizon3ai/h3-cli): Official CLI. Install: curl https://raw.githubusercontent.com/horizon3ai/h3-cli/public/easy_install.sh | bash
+- [Cortex XSOAR content](https://github.com/horizon3ai/content): Security orchestration content pack.
+
+## Docs
+
+- [Developer Portal](https://portal.horizon3ai.com)
+- [Documentation](https://docs.horizon3.ai/)
+- [Release Notes](https://docs.horizon3.ai/release_notes/): Monthly YYYY.MM releases.
+- [Status](https://status.horizon3.ai)
+- [Roadmap](https://horizon3.ai/roadmap/)
+- [Blog](https://horizon3.ai/intelligence/blogs/)
+
+## Trust and compliance
+
+- [Trust Center](https://trust.horizon3.ai/): SOC 2, FedRAMP High, CMMC, NIST 800-53.
+- [Compliance](https://horizon3.ai/compliance/)
+- [Vulnerability Disclosure Policy](https://horizon3.ai/vulnerability-disclosure-policy/): report to support@horizon3.ai, safe harbor, 90-day coordinated disclosure.
+
+## Legal
+
+- [Terms of Service](https://horizon3.ai/terms-of-service/)
+- [Privacy Policy](https://horizon3.ai/privacy-policy/)

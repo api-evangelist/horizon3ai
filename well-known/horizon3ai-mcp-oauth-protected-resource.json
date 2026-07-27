@@ -1,0 +1,1 @@
+{"resource":"https://mcp.horizon3ai.com/mcp","authorization_servers":["https://oauth-proxy.horizon3ai.com"],"bearer_methods_supported":["header"],"scopes_supported":["read","write"]}

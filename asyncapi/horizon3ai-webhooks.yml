@@ -1,0 +1,28 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.horizon3.ai/portal/settings/integrations/
+spec_type: Webhooks
+notes: >-
+  Horizon3.ai does not publish an AsyncAPI document. NodeZero supports Portal-configured
+  outbound webhooks and native ticketing integrations that push exploitable-weakness /
+  vulnerability events into external systems. Webhook configuration for vulnerability
+  management is set up per-tenant in Portal settings (Jira integration must be configured
+  before a webhook can be attached).
+webhooks:
+- name: vulnerability-management-webhook
+  direction: outbound
+  trigger: NodeZero identifies / updates exploitable weaknesses from a pentest.
+  configured_in: Portal -> Settings -> Integrations
+  docs: https://docs.horizon3.ai/portal/settings/integrations/jira/
+integrations:
+- name: Jira
+  type: ticketing + webhook
+  docs: https://docs.horizon3.ai/portal/settings/integrations/jira/
+  detail: Auto-create/update Jira tickets for weaknesses; supports a vuln-management webhook.
+- name: ServiceNow Vulnerability Response
+  type: ticketing
+  docs: https://docs.horizon3.ai/portal/settings/integrations/
+  detail: Auto-create/update ServiceNow tickets with affected assets and exploit info.
+- name: Cortex XSOAR
+  type: orchestration content pack
+  source: https://github.com/horizon3ai/content

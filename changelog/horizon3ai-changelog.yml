@@ -1,0 +1,30 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.horizon3.ai/release_notes/
+scheme: calendar (YYYY.MM, monthly)
+current: '2026.06'
+entries:
+- version: '2026.06'
+  date: '2026-06'
+  highlights: [Rapid Response enhancements, Real-Time View redesign, External Pentesting rebuild]
+- version: '2026.05'
+  date: '2026-05'
+  highlights: [Coverage for critical vulnerabilities, VMH enhancements, MSP asset management improvements]
+- version: '2026.04'
+  date: '2026-04'
+  highlights: [Redesigned sankey diagrams with CISA KEV badges, pentest resiliency upgrades]
+- version: '2026.03'
+  date: '2026-03'
+  highlights: [New attack coverage, expanded Tripwire capabilities, threat actor intelligence]
+- version: '2026.02'
+  date: '2026-02'
+  highlights: [Cross-domain credential injection, filtering enhancements across views]
+- version: '2026.01'
+  date: '2026-01'
+  highlights: [New Rapid Response coverage, expanded attack content for widespread vulnerabilities]
+- version: '2025.12'
+  date: '2025-12'
+  highlights: ['50% faster Vulnerability Management Hub queries']
+- version: '2025.11'
+  date: '2025-11'
+  highlights: ['85% faster External Asset Discovery in large environments']

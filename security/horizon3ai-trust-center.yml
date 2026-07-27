@@ -1,0 +1,24 @@
+generated: '2026-07-19'
+method: searched
+probe: false
+url: https://trust.horizon3.ai/
+source: https://horizon3.ai/compliance/
+certifications:
+- FedRAMP High
+- SOC 2
+- CMMC 2.0
+- NIST SP 800-53 Rev. 5
+compliance_frameworks:
+- FedRAMP
+- SOC 2
+- CMMC
+- NIST 800-53
+- CDM (Continuous Diagnostics and Mitigation)
+evidence:
+- {source: https://trust.horizon3.ai/, kind: trust-center}
+- {source: https://horizon3.ai/vertical/federal/, keywords: [fedramp high, nist 800-53]}
+- {source: https://horizon3.ai/compliance/, keywords: [soc 2, cmmc, fedramp]}
+notes: >-
+  trust.horizon3.ai is a JS-rendered trust center (controls, subprocessors). Certifications
+  above are corroborated by the federal vertical and compliance pages and the FedRAMP High
+  authorization announced May 2025.

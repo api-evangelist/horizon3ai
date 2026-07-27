@@ -1,0 +1,44 @@
+generated: '2026-07-19'
+method: searched
+status: published
+source: https://docs.horizon3.ai/portal/features/mcp/h3_hosted/
+server:
+  name: horizon3ai
+  vendor: Horizon3.ai
+  transport: streamable-http
+  description: >-
+    Horizon3.ai-hosted Model Context Protocol server exposing NodeZero data and
+    actions to MCP-compliant agents. Backs onto the same NodeZero platform as the
+    GraphQL API. Secured with OAuth 2.1 (PKCE) via oauth-proxy.horizon3ai.com;
+    tokens are short-lived JWTs expiring after 1 hour.
+  endpoints:
+  - region: US
+    url: https://mcp.horizon3ai.com/mcp
+  - region: EU
+    url: https://mcp.horizon3ai.eu/mcp
+  - region: FedRAMP High
+    url: https://mcp.gov-horizon3ai.com/mcp
+  auth:
+    type: oauth2.1
+    flow: authorization_code
+    pkce: S256
+    authorization_server: https://oauth-proxy.horizon3ai.com
+    authorization_endpoint: https://oauth-proxy.horizon3ai.com/authorize
+    token_endpoint: https://oauth-proxy.horizon3ai.com/token
+    registration_endpoint: https://oauth-proxy.horizon3ai.com/register
+    scopes: [read, write]
+    redirect_uris: loopback (localhost / 127.0.0.1, any port)
+    token_ttl_seconds: 3600
+  well_known:
+  - well-known/horizon3ai-mcp-oauth-authorization-server.json
+  - well-known/horizon3ai-mcp-oauth-protected-resource.json
+  - well-known/horizon3ai-mcp-openid-configuration.json
+  clients_supported:
+  - VS Code
+  - Claude Code
+  - Gemini CLI
+  - Windsurf
+notes: >-
+  Official, published, hosted remote MCP server. Tool inventory is not enumerated in
+  the public setup docs; access is gated behind Portal OAuth login. Setup: MCP: Add
+  Server -> HTTP transport -> regional URL -> OAuth redirect to the Horizon3 Portal.

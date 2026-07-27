@@ -1,0 +1,32 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.horizon3.ai/api/getting_started/
+api_style: graphql
+authentication:
+  style: bearer-jwt
+  detail: API key POSTed to /v1/auth, exchanged for a 1-hour JWT sent as Authorization Bearer.
+  ref: authentication/horizon3ai-authentication.yml
+pagination:
+  style: page-based
+  convention: >-
+    List queries follow a <entity>_page / <entity>_count pairing (e.g. pentests_page +
+    pentests_count, weaknesses_page + weaknesses_count, hosts_page + hosts_count).
+  fields: [page, page_num, page_size]
+idempotency:
+  supported: false
+  notes: No documented idempotency-key mechanism; mutations are GraphQL operations.
+versioning:
+  style: uri-path
+  current: v1
+  ref: lifecycle/horizon3ai-lifecycle.yml
+error_envelope:
+  style: graphql-errors
+  detail: >-
+    GraphQL responses carry a top-level errors[] array. Transport uses standard HTTP
+    status codes (400 malformed, 401 invalid/expired JWT, 403 not authorized, 5xx server).
+  ref: errors/horizon3ai-problem-types.yml
+rate_limiting:
+  documented: false
+regions:
+  detail: US and EU data-resident deployments plus a FedRAMP High gov region; the
+    correct regional /v1/auth and /v1/graphql host must be used per tenant.

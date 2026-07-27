@@ -1,0 +1,24 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/horizon3ai/h3-cli
+notes: >-
+  Horizon3.ai does not publish a first-party client-library SDK on npm, PyPI, Maven,
+  NuGet, RubyGems, Packagist, or crates.io (all probed 404). Its official first-party
+  tooling is the h3-cli, distributed from GitHub (git clone / easy_install.sh), plus
+  a Cortex XSOAR content pack. The GraphQL API is consumed directly over HTTP.
+packages:
+- language: shell
+  registry: github
+  name: horizon3ai/h3-cli
+  url: https://github.com/horizon3ai/h3-cli
+  install: curl https://raw.githubusercontent.com/horizon3ai/h3-cli/public/easy_install.sh | bash
+  official: true
+  kind: cli
+  description: Official CLI for the Horizon3.ai NodeZero GraphQL API.
+- language: python
+  registry: github
+  name: horizon3ai/content (Cortex XSOAR pack)
+  url: https://github.com/horizon3ai/content
+  official: true
+  kind: integration-content
+  description: Horizon3.ai NodeZero content for Cortex XSOAR security orchestration.

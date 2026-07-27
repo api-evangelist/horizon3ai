@@ -1,0 +1,24 @@
+generated: '2026-07-19'
+method: searched
+source: https://docs.horizon3.ai/api/getting_started/
+format: graphql-errors
+envelope:
+  transport: HTTP status code
+  body_field: errors
+  detail: >-
+    The GraphQL endpoint returns standard HTTP status codes; error detail is carried
+    in the top-level GraphQL errors[] array in the response body.
+problems:
+- status: 400
+  title: Malformed request
+  detail: Malformed request; see the errors field in the response data.
+- status: 401
+  title: Not authenticated
+  detail: Not authenticated due to an invalid or expired JWT.
+  example_message: The incoming token has expired
+- status: 403
+  title: Not authorized
+  detail: Not authorized to access the requested resource (role/permission denied).
+- status: 500
+  title: Internal server error
+  detail: 5xx internal server errors.

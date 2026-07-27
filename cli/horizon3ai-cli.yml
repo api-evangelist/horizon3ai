@@ -1,0 +1,40 @@
+generated: '2026-07-19'
+method: searched
+source: https://github.com/horizon3ai/h3-cli/blob/public/README.md
+docs: https://docs.horizon3.ai/cli/getting_started/using_cli/
+name: h3-cli
+binary: h3
+description: >-
+  Official command-line interface for the Horizon3.ai NodeZero GraphQL API. Schedule
+  an autonomous pentest, download and run NodeZero, monitor a pentest while it runs,
+  and retrieve reports when complete. Wraps the GraphQL endpoint and can run custom
+  queries.
+repository: https://github.com/horizon3ai/h3-cli
+install:
+- method: easy-install
+  command: curl https://raw.githubusercontent.com/horizon3ai/h3-cli/public/easy_install.sh | bash
+- method: git
+  command: git clone https://github.com/horizon3ai/h3-cli
+- method: upgrade
+  command: h3 upgrade
+environment:
+- name: H3_API_KEY
+  description: API key created in the Portal; stored in the profile under $HOME/.h3.
+- name: H3_CLI_HOME
+  description: Locates h3-cli and its supporting files.
+commands:
+- group: auth-and-profile
+  commands: [auth, whoami, profile, profiles, save-profile, delete-profile]
+- group: pentests
+  commands: [pentests, pentest, run-pentest, pentest-reports]
+- group: nodezero
+  commands: [run-nodezero]
+- group: graphql
+  commands: [gql]
+- group: utility
+  commands: [hello-world, version, upgrade]
+flows:
+- name: Run an autonomous pentest
+  steps: [h3 run-pentest, h3 run-nodezero, h3 pentest, h3 pentest-reports]
+- name: Run a custom GraphQL query
+  steps: ["h3 gql {query-file}"]

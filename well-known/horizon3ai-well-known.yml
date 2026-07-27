@@ -1,0 +1,49 @@
+generated: '2026-07-19'
+method: searched
+source: live probes of /.well-known/* on Horizon3.ai hosts
+notes: >-
+  The MCP OAuth 2.1 authorization server (oauth-proxy.horizon3ai.com, surfaced via
+  mcp.horizon3ai.com) publishes real RFC 8414 / RFC 9728 / OIDC discovery documents.
+  The portal.horizon3ai.com SPA returns HTTP 200 with a text/html app shell for any
+  /.well-known/* path (not real discovery docs) so those are recorded as not-present.
+hosts:
+- host: https://mcp.horizon3ai.com
+  documents:
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    content_type: application/json
+    file: horizon3ai-mcp-oauth-authorization-server.json
+  - path: /.well-known/oauth-protected-resource
+    status: 200
+    content_type: application/json
+    file: horizon3ai-mcp-oauth-protected-resource.json
+  - path: /.well-known/openid-configuration
+    status: 200
+    content_type: application/json
+    file: horizon3ai-mcp-openid-configuration.json
+- host: https://api.gateway.horizon3ai.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+- host: https://horizon3.ai
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+- host: https://portal.horizon3ai.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 200
+    content_type: text/html
+    note: SPA app-shell HTML, not a real RFC 9116 security.txt
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    content_type: text/html
+    note: SPA app-shell HTML, not real discovery metadata
+  - path: /.well-known/openid-configuration
+    status: 200
+    content_type: text/html
+    note: SPA app-shell HTML, not real discovery metadata

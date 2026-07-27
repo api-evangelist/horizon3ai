@@ -1,0 +1,20 @@
+generated: '2026-07-19'
+method: generated
+source: https://docs.horizon3.ai/api/graphql/
+api: NodeZero GraphQL API (https://api.gateway.horizon3ai.com/v1/graphql)
+notes: >-
+  Generated operating instructions grounded in documented NodeZero GraphQL operations.
+  Every operation name below appears in the public API reference (https://docs.horizon3.ai/api/graphql/).
+skills:
+- file: horizon3ai-run-autonomous-pentest.md
+  name: Run an autonomous NodeZero pentest and fetch the report
+  api: NodeZero GraphQL API
+  operations: [create_op, op, pentests_page, pentest, pentest_reports_zip_url]
+- file: horizon3ai-triage-weaknesses.md
+  name: Triage and re-verify NodeZero weaknesses
+  api: NodeZero GraphQL API
+  operations: [weaknesses_page, weaknesses_count, weakness, schedule_weakness_1cv_ops]
+- file: horizon3ai-schedule-recurring-pentests.md
+  name: Schedule recurring NodeZero pentests
+  api: NodeZero GraphQL API
+  operations: [op_templates_page, create_scheduled_action, schedules_page, update_scheduled_action]
