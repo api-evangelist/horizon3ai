@@ -1,0 +1,39 @@
+# Kin Score artifact — horizon3ai — 2026-08-03T161012
+# The API Evangelist rating (https://github.com/api-evangelist/kin-score). Generated; do not edit.
+---
+kin_score:
+  slug: horizon3ai
+  schema_version: 0.9
+  scored_at: '2026-08-03'
+  run_ts: 2026-08-03T161012
+  composite: 56.0
+  band: strong
+  facets:
+    discoverability: 87.0
+    contract_quality: 51.6
+    governance: 12.5
+    operational_transparency: 60.5
+    developer_ergonomics: 64.7
+    commercial_clarity: 60.5
+  agent_readiness:
+    score: 45.7
+    band: agent-ready
+    dimensions:
+      spec_presence: true
+      agentic_access: false
+      mcp_server: true
+      auth_clarity: true
+      idempotency: false
+      error_semantics: documented
+      openapi_examples: false
+      rate_limit_signal: false
+      event_surface_described: derived
+      agent_skills: derived
+      well_known_catalog: true
+      consent_identity: false
+      agent_card: false
+      dry_run_mode: false
+  provenance:
+    mcp: first-party
+    skills: derived
+    conformance: first-party
