@@ -45,6 +45,8 @@ deployment:
   mode: remote
   endpoint: https://mcp.horizon3ai.com/mcp
   verified: probed
-  probe: wall
-  checked: '2026-08-12'
-  source: catalog MCP census
+  probe: gated
+  checked: '2026-09-11'
+  source: wall re-adjudication 2026-09-11 (RFC 9728 / JSON-RPC envelope)
+  probe_prior: wall
+  probe_why: RFC 9728 challenge (host-wide OAuth-protected resource)
