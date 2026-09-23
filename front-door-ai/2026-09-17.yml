@@ -1,0 +1,30 @@
+# Front Door AI Index — horizon3ai — 2026-09-17
+# AI vocabulary counted on the provider's root page. Generated; do not edit.
+# `score` is null unless ownership is `own` — see front_door_ai.py.
+front_door_ai:
+  slug: horizon3ai
+  lexicon_version: '1.0'
+  probed_at: '2026-09-17'
+  host: horizon3.ai
+  final_host: horizon3.ai
+  ownership: own
+  owner: horizon3ai
+  shares_host_with: null
+  inherited_from: null
+  verdict: scored
+  score: 13
+  host_score: 13
+  density: 9.95
+  words: 1306
+  tiers:
+    agentic: 3
+    core: 10
+    model: 0
+  ambiguous: 7
+  top_terms:
+    AI: 8
+    intelligence: 6
+    MCP: 3
+    agent: 1
+    gen ai: 1
+    machine learning: 1

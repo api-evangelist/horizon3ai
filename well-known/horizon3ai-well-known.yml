@@ -1,11 +1,10 @@
-generated: '2026-07-19'
+generated: '2026-09-19'
 method: searched
 source: live probes of /.well-known/* on Horizon3.ai hosts
-notes: >-
-  The MCP OAuth 2.1 authorization server (oauth-proxy.horizon3ai.com, surfaced via
-  mcp.horizon3ai.com) publishes real RFC 8414 / RFC 9728 / OIDC discovery documents.
-  The portal.horizon3ai.com SPA returns HTTP 200 with a text/html app shell for any
-  /.well-known/* path (not real discovery docs) so those are recorded as not-present.
+notes: The MCP OAuth 2.1 authorization server (oauth-proxy.horizon3ai.com, surfaced via mcp.horizon3ai.com)
+  publishes real RFC 8414 / RFC 9728 / OIDC discovery documents. The portal.horizon3ai.com SPA returns
+  HTTP 200 with a text/html app shell for any /.well-known/* path (not real discovery docs) so those are
+  recorded as not-present.
 hosts:
 - host: https://mcp.horizon3ai.com
   documents:
@@ -47,3 +46,23 @@ hosts:
     status: 200
     content_type: text/html
     note: SPA app-shell HTML, not real discovery metadata
+- host: https://oauth-proxy.horizon3ai.com
+  documents:
+  - path: /.well-known/oauth-authorization-server
+    status: 200
+    file: horizon3ai-oauth-proxy-oauth-authorization-server.json
+    bytes: 1049
+  path_echo_control: passed
+x-mcp-probe:
+  probed: '2026-09-19'
+  issue: roadmap#321, roadmap#337
+  documents:
+  - host: https://oauth-proxy.horizon3ai.com
+    path: /.well-known/oauth-authorization-server
+    file: horizon3ai-oauth-proxy-oauth-authorization-server.json
+  validated_on: resource (RFC 9728) / issuer (RFC 8414, OIDC)
+  negative_control: one per host; a 2xx JSON object at an impossible path discards the host
+note: 'MCP-host OAuth discovery added 2026-09-19 (roadmap#321/#337): the harvest visits a provider''s
+  primary hosts, and RFC 9728 protected-resource metadata lives on the MCP host, so these documents existed
+  and were invisible to the scorer. Fetched live and validated on `resource`/`issuer`; one negative control
+  per host.'
