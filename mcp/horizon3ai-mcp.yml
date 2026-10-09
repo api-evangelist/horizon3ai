@@ -50,3 +50,20 @@ deployment:
   source: wall re-adjudication 2026-09-11 (RFC 9728 / JSON-RPC envelope)
   probe_prior: wall
   probe_why: RFC 9728 challenge (host-wide OAuth-protected resource)
+rfc9728:
+  endpoint: https://mcp.horizon3ai.com/mcp
+  metadata_url: https://mcp.horizon3ai.com/.well-known/oauth-protected-resource
+  discovered_via: WWW-Authenticate resource_metadata on an anonymous POST initialize
+  fetched: '2026-09-25'
+  http_status: 200
+  content_type: application/json
+  document:
+    resource: https://mcp.horizon3ai.com/mcp
+    authorization_servers:
+    - https://oauth-proxy.horizon3ai.com
+    scopes_supported:
+    - read
+    - write
+    - offline_access
+    bearer_methods_supported:
+    - header
