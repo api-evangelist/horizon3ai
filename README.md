@@ -64,6 +64,119 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Horizon3.ai is a company surfaced as a portfolio company of craft-ventures and added to the API Evangelist network as a stub for enrichment. Sector: security. This profile is a lead awaiting the enrichment pipeline.
+Horizon3.ai is a cybersecurity company whose NodeZero platform delivers autonomous penetration testing and continuous security posture management. NodeZero safely attacks your internal, external, cloud, and hybrid environments the way a real adversary would, proving exploitable attack paths, prioritizing the fixes that matter, and verifying that remediations actually work. Horizon3.ai exposes a publicly documented GraphQL API (the NodeZero API) plus an h3-cli command-line tool and a hosted Model Context Protocol (MCP) server, letting teams schedule pentests, retrieve findings, weaknesses, attack paths, credentials, and host inventory, and wire results into CI/CD, ticketing (Jira, ServiceNow), and agentic workflows. NodeZero Federal is FedRAMP High authorized for public-sector use.
 
-Backed by: craft-ventures — https://horizon3.ai
+**Areas:** Company · Security · Cybersecurity · Penetration Testing · Autonomous Pentesting · Attack Surface Management · Exposure Management · Vulnerability Management · GraphQL · Offensive Security
+
+## Horizon3.ai on APIs.io
+
+Everything profiled for Horizon3.ai is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/horizon3ai/](https://apis.io/providers/horizon3ai/)** — or go straight to one of the APIs or properties below.
+
+### APIs (1)
+
+- [NodeZero GraphQL API](https://apis.io/apis/horizon3ai/nodezero-graphql-api/) — The NodeZero API is a publicly accessible GraphQL API that exposes a subset of the Horizon3.ai Portal: schedule and control autonomous pentest operations,…
+
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### AsyncAPI (1)
+
+Event-driven and webhook contracts.
+
+- [Horizon3Ai Webhooks](https://apis.io/asyncapis/horizon3ai/horizon3ai-webhooks/)
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [horizon3ai](https://apis.io/servers/horizon3ai/horizon3ai/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Horizon3Ai Authentication](https://apis.io/security/horizon3ai/horizon3ai-authentication/)
+- [Horizon3Ai Domain Security](https://apis.io/security/horizon3ai/horizon3ai-domain-security/)
+- [Horizon3Ai Trust Center](https://apis.io/security/horizon3ai/horizon3ai-trust-center/)
+- [Horizon3Ai Vulnerability Disclosure](https://apis.io/security/horizon3ai/horizon3ai-vulnerability-disclosure/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Horizon3Ai Scopes](https://apis.io/scopes/horizon3ai/horizon3ai-scopes/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://horizon3.ai)
+- [Documentation](https://docs.horizon3.ai/)
+- [Getting started](https://docs.horizon3.ai/api/getting_started/)
+- [API reference](https://docs.horizon3.ai/api/graphql/)
+- [Pricing](https://horizon3.ai/use-case/packaging/)
+- [Sign up](https://portal.horizon3ai.com)
+- [Blog](https://horizon3.ai/resource-center/)
+- [Security](https://horizon3.ai/vulnerability-disclosure-policy/)
+- [Compliance](https://horizon3.ai/compliance/)
+- [Trust centre](https://trust.horizon3.ai/)
+- [Terms of service](https://horizon3.ai/terms-of-service/)
+- [Privacy policy](https://horizon3.ai/privacy-policy/)
+- [GitHub](https://github.com/horizon3ai)
+- [Status](https://status.horizon3.ai)
+
+## API Evangelist rating
+
+**Kin Score 49.8** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 75.0 |
+| Contract quality | 39.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 50.0 |
+| Developer ergonomics | 49.4 |
+| Access clarity | 47.4 |
+
+**Agent readiness 48.4** — agent-ready (gated down from agent-native)
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | yes |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | verified |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | — |
+| Event Surface Described | yes |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 45.1** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/horizon3ai/](https://apis.io/providers/horizon3ai/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Horizon3.ai: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/horizon3ai/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
